@@ -1,0 +1,73 @@
+import java.util.*;
+
+public class Enigma {
+
+    public static void main(String[] args) {
+
+        
+        String arma_asesino = "soga";
+        String lugar_asesino = "billar";
+        String asesino = "coronel mostaza";
+
+        String [] personajes = {"sospechosos:","srta. scarlata", "coronel mostaza", "profesor ciruela", "sr. verde ","sra. pavo real"};
+
+        String arma = ""; 
+        String lugar = ""; 
+        String sospechoso = ""; 
+
+        Scanner x = new Scanner(System.in);
+        int i;
+
+        System.out.println("¡Bienvenido al juego de Cluedo!");
+        System.out.println("Adivina quién es el asesino. Proporcionado las características del asesinato.");
+        System.out.println("Caracteristicas: cabello rojo, bigote, baston, sombrero, cabello rubio");
+        System.out.println("Armas: candelabro, pistola, soga, tubo,  cuchillo, llave inglesa");
+        System.out.println("Lugares: sala, terraza, biblioteca, billar, pase secreto, alcoba");
+
+   
+        for(i=0; i<personajes.length;i++){
+            System.out.println(personajes[i]);
+        } 
+
+        while(!arma_asesino.equalsIgnoreCase(arma)) {
+
+            System.out.print("¿Cuál es la arma? ");
+            arma = x.nextLine();
+        
+            if(arma_asesino.equals(arma)){
+                System.out.println("Arma Correcta");
+                
+            }
+            else System.out.println("Arma Incorrecto, vuelva a intentarlo");
+        }
+        while(!lugar_asesino.equalsIgnoreCase(lugar)) {
+
+            System.out.print("¿Cuál es el lugar del homicidio? ");
+            lugar = x.nextLine();
+        
+            if(lugar_asesino.equals(lugar)){
+                System.out.println("Lugar Correcta");
+                
+            }
+            else System.out.println("Lugar Incorrecto, vuelva a intentarlo");
+        }
+        while(!asesino.equalsIgnoreCase(sospechoso)) {
+
+            System.out.print("¿Quien es el asesino? ");
+            sospechoso = x.nextLine();
+        
+            if(asesino.equals(sospechoso)){
+                System.out.println("Has encotrado al asesino");
+                System.out.println("Felicidades has hallado alasesino y resuelto el caso");
+                System.out.println("Arma: soga");
+                System.out.println("Lugar: billar");
+                System.out.println("Asesino: coronel mostaza");
+                System.out.println("gracias por jugar");
+                
+            }
+            else System.out.println("Asesino Incorrecto, vuelva a intentarlo");
+        }
+
+    }
+            
+}
